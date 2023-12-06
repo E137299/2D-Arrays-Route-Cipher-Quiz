@@ -35,13 +35,7 @@ public class RouteCipher{
     *   @return the encrypted string from letterBlock
     */
     public String encryptBlock(){ 
-        String str ="";
-        for(int x = 0; x < letterBlock[0].length; x++){
-            for(int y = 0; y<letterBlock.length; y++){
-                str += letterBlock[y][x];
-            }
-        }
-        return str;
+        /* to be implemented in part (b) */
      }
 
     /** Encrypts a message.
@@ -50,7 +44,7 @@ public class RouteCipher{
     *           if message is the empty string, returns the empty string
     */
     public String encryptMessage(String message){ 
-        /* to be implemented in part (b) */ 
+        /* to be implemented in part (c) */ 
     }
 
     // There may be instance variables, constructors, and methods that are not shown

@@ -67,8 +67,16 @@ The following expression may be used to obtain a single-character string at posi
 ```java
 str.substring(k, k + 1)
 ```
+
 <br></br>
-**Part b.** Write the method encryptMessage that encrypts its string parameter message. The method builds an encrypted version of message by repeatedly calling fillBlock with consecutive, non-overlapping substrings of message and concatenating the results returned by a call to encryptBlock after each call to fillBlock. When all of message has been processed, the concatenated string is returned. Note that if message is the empty string, encryptMessage returns an empty string.
+**Part C.** Write the method encryptBlock that extracts an encrypted string from the letterBlock following a column-major order.Traverse through the letterBlock in a column-major manner to gather characters and construct the encrypted string. The method should return this string as the output. 
+
+![routecipher](assets/routecipher5.PNG)
+
+
+
+<br></br>
+**Part B.** Write the method encryptMessage that encrypts its string parameter message. The method builds an encrypted version of message by repeatedly calling fillBlock with consecutive, non-overlapping substrings of message and concatenating the results returned by a call to encryptBlock after each call to fillBlock. When all of message has been processed, the concatenated string is returned. Note that if message is the empty string, encryptMessage returns an empty string.
 
 The following example shows the process carried out if letterBlock has 2 rows and 3 columns and encryptMessage("Meet at midnight") is executed.
 
