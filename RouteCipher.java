@@ -9,8 +9,14 @@ public class RouteCipher{
     /** The number of columns of letterBlock, set by the constructor */
     private int numCols;
 
-    public RouteCipher(int row, int column){
+    public RouteCipher(int rows, int columns){
+        numRows = rows;
+        numCols = columns;
         letterBlock = new String[numRows][numCols];
+    }
+
+    public String[][] getLetterBlock(){
+        return letterBlock;
     }
 
         
@@ -20,14 +26,23 @@ public class RouteCipher{
     *     if str.length() < numRows * numCols, "A" in each unfilled cell
     *     if str.length() > numRows * numCols, trailing characters are ignored
     */
-    private void fillBlock(String str){ /* to be implemented in part (a) */ }
+    public void fillBlock(String str){ 
+        /* to be implemented in part (a) */ 
+    }
 
     /** Extracts encrypted string from letterBlock in column-major order.
      *   Precondition: letterBlock has been filled
     *   @return the encrypted string from letterBlock
     */
-    private String encryptBlock()
-    { /* implementation not shown */ }
+    public String encryptBlock(){ 
+        String str ="";
+        for(int x = 0; x < letterBlock[0].length; x++){
+            for(int y = 0; y<letterBlock.length; y++){
+                str += letterBlock[y][x];
+            }
+        }
+        return str;
+     }
 
     /** Encrypts a message.
      *   @param message the string to be encrypted
@@ -36,7 +51,7 @@ public class RouteCipher{
     */
     public String encryptMessage(String message){ 
         /* to be implemented in part (b) */ 
-        }
+    }
 
     // There may be instance variables, constructors, and methods that are not shown
 }
